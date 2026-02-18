@@ -129,6 +129,7 @@ $conn->close();
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="assets/css/site.css">
     <title>Edit Exam</title>
     <style>
         .form-container {

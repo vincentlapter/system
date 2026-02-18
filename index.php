@@ -511,7 +511,7 @@ ob_end_flush();
             <!-- Card Header with School Branding -->
             <div class="card-header">
                 <div class="school-logo">
-                    <img src="./school photos/badge.jpg" alt="The Shepherds Junior School Logo" onerror="this.src='https://via.placeholder.com/100x100?text=Logo'">
+                    <img src="badge.jpg" alt="The Shepherds Junior School Logo" onerror="this.src='https://via.placeholder.com/100x100?text=Logo'">
                 </div>
                 <div class="school-name">THE SHEPHERDS JUNIOR SCHOOL</div>
                 <div class="school-location">KAMULI</div>
@@ -587,6 +587,7 @@ ob_end_flush();
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/site.js"></script>
     
     <script>
         // Focus on username field if empty

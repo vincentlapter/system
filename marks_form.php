@@ -14,6 +14,7 @@ $exams = $pdo->query("SELECT exam_id, exam_name FROM examination")->fetchAll(PDO
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="assets/css/site.css">
     <title>Enter Marks</title>
 </head>
 <body>

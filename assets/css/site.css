@@ -1,0 +1,111 @@
+:root {
+    --primary: #02333a;
+    --accent: #4CAF50;
+    --bg1: #02333a;
+    --bg2: #1a4a52;
+    --text-dark: #02333a;
+    --muted: #f0f5f5;
+    --card-bg: #ffffff;
+    --muted-text: #6c757d;
+}
+
+/* Reset and base */
+* { box-sizing: border-box; }
+html,body { height: 100%; }
+body {
+    margin: 0;
+    background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 100%);
+    color: #212529;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+/* App layout */
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: var(--primary);
+    color: #fff;
+    padding: 18px 12px;
+    flex-shrink: 0;
+}
+
+.sidebar .nav-link { color: rgba(255,255,255,0.9); display:block; padding:10px; border-radius:6px; }
+.sidebar .nav-link:hover { background: rgba(255,255,255,0.06); color: #fff; }
+
+.main {
+    flex: 1 1 auto;
+    padding: 22px;
+    background: transparent;
+}
+
+.topbar {
+    display:flex; align-items:center; justify-content:space-between;
+    gap:12px; margin-bottom:18px;
+}
+
+.brand { font-weight:700; color:#fff; }
+.topbar .page-title { font-size:1.25rem; color:var(--primary); font-weight:600; }
+
+/* Cards */
+.card, .dashboard-card { background: var(--card-bg); border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); color: #212529; }
+.card-body { padding: 18px; }
+
+/* Buttons */
+.btn, button { border-radius: 8px; }
+.btn-primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+
+/* Forms */
+.form-label { color: var(--text-dark); font-weight:600; }
+.form-control { border-radius:8px; }
+
+/* Responsive table wrapper */
+.table-responsive { overflow-x: auto; }
+
+/* Responsive helpers */
+.stack { display:flex; gap:12px; }
+.stack.col { flex-direction:column; }
+
+/* Small screens: collapse sidebar */
+@media (max-width: 992px) {
+    .sidebar { position: fixed; top: 0; left: -280px; height: 100vh; z-index: 1050; transition: left .25s ease; }
+    .sidebar.open { left: 0; }
+    .main { padding: 14px; }
+    .mobile-toggle { display:inline-block; }
+}
+
+@media (min-width: 993px) {
+    .mobile-toggle { display:none; }
+}
+
+/* Utility spacing */
+.mb-12 { margin-bottom: 12px; }
+.mt-12 { margin-top: 12px; }
+
+/* Forms and small elements tweaks */
+input[type="text"], input[type="date"], input[type="password"], textarea, select { padding:10px; border:1px solid #e6e9ee; }
+
+/* Links */
+
+
+/* Ensure school logo contrast */
+.school-logo { background: #fff; border-radius:50%; padding:6px; display:inline-block; }
+
+/* Alerts preserve original look */
+.alert { border-radius:10px; }
+
+/* Make tables more readable */
+table { width:100%; border-collapse:collapse; }
+th, td { padding:10px 12px; border-bottom:1px solid #eef1f5; }
+
+/* Small device tweaks */
+@media (max-width: 480px) {
+    .topbar .page-title { font-size: 1rem; }
+    .card-body { padding: 12px; }
+}

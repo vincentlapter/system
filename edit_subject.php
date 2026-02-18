@@ -62,6 +62,7 @@ $conn->close();
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="assets/css/site.css">
     <title>Edit Subject</title>
     <style>
         /* Same styling as add_subject.php */

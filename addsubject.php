@@ -34,6 +34,7 @@ $conn->close();
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="assets/css/site.css">
     <title>Add New Subject</title>
     <style>
         /* Same styling as add_class.php */

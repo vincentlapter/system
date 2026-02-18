@@ -8,6 +8,7 @@ if (!isset($_SESSION['username'])) {
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="assets/css/site.css">
     <title>Marks Report</title>
 </head>
 <body>

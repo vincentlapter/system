@@ -216,6 +216,7 @@ function generate_student_report($conn, $student_id, $grading_scheme) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="assets/css/site.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Report Cards - School Management System</title>
@@ -1338,6 +1339,7 @@ function generate_student_report($conn, $student_id, $grading_scheme) {
             }
         });
     </script>
+    <script src="assets/js/site.js"></script>
 </body>
 </html>
 <?php

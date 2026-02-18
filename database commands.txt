@@ -1,0 +1,90 @@
+CREATE TABLE teacher (
+    teacher_id INT AUTO_INCREMENT PRIMARY KEY,
+    fname VARCHAR(50) NOT NULL,
+    lname VARCHAR(50) NOT NULL,
+    dob DATE NOT NULL,
+    contact VARCHAR(20),
+    gender ENUM('Male', 'Female') NOT NULL,
+    subject VARCHAR(100) NOT NULL,
+    subject_id INT,
+    FOREIGN KEY (subject_id) REFERENCES subject(subject_id)
+);
+
+CREATE TABLE class (
+    class_id INT AUTO_INCREMENT PRIMARY KEY,
+    class_name VARCHAR(50) NOT NULL,
+    class_teacher_id INT,
+    FOREIGN KEY (class_teacher_id) REFERENCES teacher(teacher_id)
+);
+
+CREATE TABLE student (
+    student_id INT AUTO_INCREMENT PRIMARY KEY,
+    fname VARCHAR(50) NOT NULL,
+    lname VARCHAR(50) NOT NULL,
+    dob DATE NOT NULL,
+    gender ENUM('Male', 'Female') NOT NULL,
+    class_id INT,
+    FOREIGN KEY (class_id) REFERENCES class(class_id)
+);
+
+CREATE TABLE subject (
+    subject_id INT AUTO_INCREMENT PRIMARY KEY,
+    subject_name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE examination (
+    exam_id INT AUTO_INCREMENT PRIMARY KEY,
+    exam_name VARCHAR(100) NOT NULL,
+    exam_date DATE,
+    subject_id INT,
+    FOREIGN KEY (subject_id) REFERENCES subject(subject_id)
+);
+
+CREATE TABLE exam_subjects (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    subject_id INT,
+    exam_id INT,
+    FOREIGN KEY (subject_id) REFERENCES subject(subject_id),
+    FOREIGN KEY (exam_id) REFERENCES examination(exam_id)
+);
+
+CREATE TABLE marks (
+    mark_id INT AUTO_INCREMENT PRIMARY KEY,
+    marks_obtained DECIMAL(5,2) NOT NULL,
+    student_id INT,
+    subject_id INT,
+    exam_id INT,
+    exam_subjects_id INT,
+    FOREIGN KEY (student_id) REFERENCES student(student_id),
+    FOREIGN KEY (subject_id) REFERENCES subject(subject_id),
+    FOREIGN KEY (exam_id) REFERENCES examination(exam_id),
+    FOREIGN KEY (exam_subjects_id) REFERENCES exam_subjects(id)
+);
+
+CREATE TABLE users (
+  id int(11) NOT NULL,
+  username varchar(100) NOT NULL,
+  password varchar(255) NOT NULL,
+  role enum('Teacher','Administrator') NOT NULL,
+  linked_teacher_id int(11) DEFAULT NULL,
+  created_at timestamp NOT NULL DEFAULT current_timestamp()
+);
+
+CREATE TABLE grading_scheme (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    grade_name VARCHAR(10) NOT NULL,
+    min_mark INT NOT NULL,
+    max_mark INT NOT NULL
+);
+
+CREATE TABLE terms (
+    term_id INT AUTO_INCREMENT PRIMARY KEY,
+    term_name VARCHAR(100) NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    academic_year VARCHAR(20) NOT NULL,
+    status ENUM('Active', 'Inactive') DEFAULT 'Active'
+);
+
+INSERT INTO users (id, username, password, role, linked_teacher_id, created_at) VALUES
+(1, 'lapter', '$2y$10$hUi0eg85XcOljXymeB3U1O/Oxl4u0UImK0wWZwyE3LM4XZDRF.Se6', 'Administrator', NULL, '2025-04-10 11:51:48');

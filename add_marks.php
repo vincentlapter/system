@@ -173,13 +173,6 @@ $conn->close();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
     <style>
         body{background:#f8f9fa}
-        .sidebar{background:#343a40;color:#fff;min-height:100vh;padding-top:20px}
-        .sidebar a{color:#fff;display:block;padding:10px 20px;text-decoration:none}
-        .sidebar a:hover,.sidebar .active{background:#495057}
-        .sidebar ul{list-style:none;padding-left:20px}
-        .sidebar ul li a{color:#ccc;padding:8px 20px}
-        .sidebar ul li a:hover{color:#fff}
-        .marks-input{width:80px}
     </style>
 </head>
 <body>

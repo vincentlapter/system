@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio | Your Name</title>
+    <title>Portfolio | Mujuni Vincent</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#home">Your Name</a>
+        <a class="navbar-brand fw-bold" href="#home">Mujuni Vincent</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,13 +26,15 @@
       </div>
     </nav>
 
-    <header id="home" class="hero bg-primary text-white text-center py-5">
+    <header id="home" class="hero text-white text-center py-5">
       <div class="container">
-        <p class="text-uppercase letter-spacing mb-3">Creative Web Developer</p>
-        <h1 class="display-5 fw-bold">Hi, I’m Your Name.</h1>
-        <p class="lead mb-4">I build modern websites and user experiences with Bootstrap, HTML, and CSS.</p>
-        <a href="#projects" class="btn btn-light btn-lg me-2">View Projects</a>
-        <a href="#contact" class="btn btn-outline-light btn-lg">Contact Me</a>
+        <p class="text-uppercase letter-spacing mb-3 fade-in-text">Creative Web Developer</p>
+        <h1 class="display-4 fw-bold mb-4 hero-title">Hi, I'm Mujuni Vincent.</h1>
+        <p class="lead mb-5 hero-subtitle">Full-stack developer passionate about building robust backends, scalable apps, and dynamic web experiences.</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="#projects" class="btn btn-light btn-lg px-4 btn-hover">View Projects</a>
+          <a href="#contact" class="btn btn-outline-light btn-lg px-4 btn-hover">Contact Me</a>
+        </div>
       </div>
     </header>
 
@@ -39,21 +42,21 @@
       <section id="about" class="py-5">
         <div class="container">
           <div class="row align-items-center gap-4">
-            <div class="col-lg-6">
-              <h2>About Me</h2>
-              <p class="text-muted">I’m a passionate designer and front-end developer who loves turning ideas into beautiful digital experiences. My focus is on responsive, accessible, and easy-to-maintain websites that look great on every device.</p>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="800">
+              <h2 class="section-title">About Me</h2>
+              <p class="text-muted">I'm a Computer Science finalist at Kampala Youth University (KYU) with expertise across multiple technology domains. I'm driven by solving complex problems and building scalable solutions that combine robust backend architectures with seamless user experiences.</p>
               <ul class="list-unstyled">
-                <li><strong>Location:</strong> Your City, Country</li>
-                <li><strong>Experience:</strong> 3+ years building web apps</li>
-                <li><strong>Favorite tools:</strong> Bootstrap, HTML, CSS, JavaScript</li>
+                <li><strong>Location:</strong> Uganda</li>
+                <li><strong>Education:</strong> Computer Science Finalist at KYU</li>
+                <li><strong>Specialties:</strong> Networking, Backend, App & Web Development</li>
               </ul>
             </div>
-            <div class="col-lg-5">
-              <div class="card shadow-sm border-0">
+            <div class="col-lg-5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+              <div class="card shadow-lg border-0 profile-card">
                 <div class="card-body text-center py-5">
                   <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80" alt="Profile" class="rounded-circle mb-3 profile-img">
-                  <h5 class="card-title mb-1">Your Name</h5>
-                  <p class="text-muted mb-0">Web Developer & Designer</p>
+                  <h5 class="card-title mb-1">Mujuni Vincent</h5>
+                  <p class="text-muted mb-0">Full-Stack Developer | KYU Computer Science</p>
                 </div>
               </div>
             </div>
@@ -61,65 +64,73 @@
         </div>
       </section>
 
-      <section id="skills" class="py-5 bg-light">
+      <section id="skills" class="py-5 skills-section">
         <div class="container">
           <div class="text-center mb-5">
-            <p class="text-uppercase text-secondary mb-2">What I do</p>
-            <h2>Skills</h2>
+            <p class="text-uppercase text-secondary mb-2 label-text">What I do</p>
+            <h2 class="section-title">Skills</h2>
           </div>
           <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-              <div class="feature-box p-4 h-100 shadow-sm rounded">
-                <h5>Responsive Design</h5>
-                <p class="small text-muted mb-0">Creating layouts that adapt beautifully to any screen size.</p>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-duration="600">
+              <div class="feature-box p-4 h-100 shadow-sm rounded skill-card">
+                <div class="skill-icon mb-3">�</div>
+                <h5>Networking</h5>
+                <p class="small text-muted mb-0">Designing and implementing robust network infrastructure and protocols.</p>
               </div>
             </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="feature-box p-4 h-100 shadow-sm rounded">
-                <h5>UI/UX</h5>
-                <p class="small text-muted mb-0">Designing intuitive interfaces and polished user experiences.</p>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+              <div class="feature-box p-4 h-100 shadow-sm rounded skill-card">
+                <div class="skill-icon mb-3">⚙️</div>
+                <h5>Backend Development</h5>
+                <p class="small text-muted mb-0">Building scalable APIs, databases, and server-side logic.</p>
               </div>
             </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="feature-box p-4 h-100 shadow-sm rounded">
-                <h5>JavaScript</h5>
-                <p class="small text-muted mb-0">Adding interactivity and dynamic behavior to modern websites.</p>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+              <div class="feature-box p-4 h-100 shadow-sm rounded skill-card">
+                <div class="skill-icon mb-3">📱</div>
+                <h5>App Development</h5>
+                <p class="small text-muted mb-0">Creating responsive mobile applications for iOS and Android platforms.</p>
               </div>
             </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="feature-box p-4 h-100 shadow-sm rounded">
-                <h5>Bootstrap</h5>
-                <p class="small text-muted mb-0">Building fast and responsive pages with Bootstrap components and utilities.</p>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+              <div class="feature-box p-4 h-100 shadow-sm rounded skill-card">
+                <div class="skill-icon mb-3">🎨</div>
+                <h5>Web Development</h5>
+                <p class="small text-muted mb-0">Building modern, responsive, and interactive web applications.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="projects" class="py-5">
+      <section id="projects" class="py-5 projects-section">
         <div class="container">
           <div class="text-center mb-5">
-            <p class="text-uppercase text-secondary mb-2">Showcase</p>
-            <h2>Featured Projects</h2>
+            <p class="text-uppercase text-secondary mb-2 label-text">Showcase</p>
+            <h2 class="section-title">Featured Projects</h2>
           </div>
           <div class="row g-4">
-            <div class="col-md-6">
-              <div class="card h-100 shadow-sm border-0 project-card">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Project 1">
+            <div class="col-md-6" data-aos="zoom-in" data-aos-duration="700">
+              <div class="card h-100 shadow-lg border-0 project-card">
+                <div class="project-img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Project 1">
+                </div>
                 <div class="card-body">
                   <h5 class="card-title">Project One</h5>
                   <p class="card-text text-muted">A responsive landing page built with Bootstrap and modern layout techniques.</p>
-                  <a href="#" class="stretched-link">View details</a>
+                  <a href="#" class="stretched-link project-link">View details →</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="card h-100 shadow-sm border-0 project-card">
-                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Project 2">
+            <div class="col-md-6" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="200">
+              <div class="card h-100 shadow-lg border-0 project-card">
+                <div class="project-img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Project 2">
+                </div>
                 <div class="card-body">
                   <h5 class="card-title">Project Two</h5>
                   <p class="card-text text-muted">A custom portfolio website with attention to typography and visual hierarchy.</p>
-                  <a href="#" class="stretched-link">View details</a>
+                  <a href="#" class="stretched-link project-link">View details →</a>
                 </div>
               </div>
             </div>
@@ -127,20 +138,20 @@
         </div>
       </section>
 
-      <section id="contact" class="py-5 bg-primary text-white">
+      <section id="contact" class="py-5 contact-section">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-7">
-              <h2>Let’s work together</h2>
-              <p class="lead mb-4">I’m open to new projects, collaborations, and freelance opportunities. Send me a message and let’s build something great.</p>
+          <div class="row align-items-center g-5">
+            <div class="col-lg-7" data-aos="fade-up" data-aos-duration="800">
+              <h2 class="section-title text-white">Let's work together</h2>
+              <p class="lead text-white-75 mb-0">I'm open to new projects, collaborations, and freelance opportunities. Send me a message and let's build something great.</p>
             </div>
-            <div class="col-lg-5">
-              <div class="card bg-white text-dark shadow-sm border-0">
+            <div class="col-lg-5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+              <div class="card bg-white text-dark shadow-lg border-0 contact-card">
                 <div class="card-body p-4">
-                  <h5>Contact</h5>
-                  <p class="small text-muted">Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-                  <p class="small text-muted">Phone: +1 (123) 456-7890</p>
-                  <p class="small text-muted mb-0">LinkedIn: <a href="#">your-linkedin</a></p>
+                  <h5 class="mb-4">Get in Touch</h5>
+                  <p class="small text-muted mb-3"><strong>Email:</strong> <a href="mailto:your.email@example.com" class="contact-link">your.email@example.com</a></p>
+                  <p class="small text-muted mb-3"><strong>Phone:</strong> +1 (123) 456-7890</p>
+                  <p class="small text-muted mb-0"><strong>LinkedIn:</strong> <a href="#" class="contact-link">your-linkedin</a></p>
                 </div>
               </div>
             </div>
@@ -151,10 +162,19 @@
 
     <footer class="py-4 bg-dark text-white text-center">
       <div class="container">
-        <p class="mb-0">&copy; 2026 Your Name. Built with Bootstrap.</p>
+        <p class="mb-0">&copy; 2026 Mujuni Vincent. Built with Bootstrap & Love.</p>
       </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+      });
+    </script>
   </body>
 </html>
